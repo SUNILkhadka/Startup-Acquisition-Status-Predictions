@@ -23,7 +23,14 @@
                 <form action="/predict" method="POST">
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-gray-200 sm:p-9">
+                            <h3 style="text-align:center; font-size:20px; color:green; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">For null values input 'nan' !Don't leave any field blank.</h3>
                             <div class="grid grid-cols-6 gap-6">
+                                
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="founded-at" class="block text-sm font-medium text-black-700">Founded date:</label>
+                                    <input type="text" name="founded-at" id="founded-at" autocomplete="given-name" class="mt-1 focus:ring-black-500 focus:border-black-500 block w-full h-10 shadow border-black-300 rounded-md">
+                                </div>
+
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="funding-rounds" class="block text-sm font-medium text-black-700">Funding rounds:  <small>values up to 3 rounds</small></label>
                                     <input type="text" name="funding-rounds" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-black-500 focus:border-black-500 block w-full h-10 shadow border-black-300 rounded-md">
@@ -44,17 +51,10 @@
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3">
-                                    <label for="lat" class="block text-sm font-medium text-black-700">Latitude:</label>
-                                    <input type="text" name="lat" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-black-500 focus:border-black-500 block w-full h-10 shadow border-black-300 rounded-md">
-                                </div>
-                                <div class="col-span-6 sm:col-span-3">
-                                    <label for="lon" class="block text-sm font-medium text-black-700">Longitude:</label>
-                                    <input type="text" name="lon" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-black-500 focus:border-black-500 block w-full h-10 shadow border-black-300 rounded-md">
-                                </div>
-                                <div class="col-span-6 sm:col-span-3">
                                     <label for="active-days" class="block text-sm font-medium text-black-700">Active Days:</label>
                                     <input type="text" name="active-days" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-black-500 focus:border-black-500 block w-full h-10 shadow border-black-300 rounded-md">
                                 </div>
+
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="category-code" class="block text-sm font-medium text-gray-700">Code Category</label>
                                     <select id="country" name="category-code" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
@@ -67,8 +67,6 @@
                             <option>mobile</option>
                             <option>health</option>
                             <option>software</option>
-
-
                             <option>biotech</option>
                             <option>ecommerce</option>
                             <option>public relatiions</option>
@@ -81,15 +79,15 @@
                                     <label for="country" class="block text-sm font-medium text-gray-700">Country Code</label>
                                     <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                         <option data-countryCode="US" value="US">USA </option>
-                        <option data-countryCode="GBR" value="GBR" Selected>UK </option>
-                        <option data-countryCode="IND" value="IND">India </option>
-                        <option data-countryCode="CAN" value="CAN">Canada </option>
-                        <option data-countryCode="DEU" value="DEU">Germany </option>
-                        <option data-countryCode="FRA" value="FRA">France</option>
-                        <option data-countryCode="AUS" value="AUS">Australia</option>
-                        <option data-countryCode="ESP" value="ESP">Spain</option>
-                        <option data-countryCode="IRL" value="IRL">Ireland</option>
-                        <option data-countryCode="other" value="other">Others</option>
+                        <option data-countryCode="GBR" value="GBR" Selected>GBR </option>
+                        <option data-countryCode="IND" value="IND">IND </option>
+                        <option data-countryCode="CAN" value="CAN">CAN </option>
+                        <option data-countryCode="DEU" value="DEU">=DEU </option>
+                        <option data-countryCode="FRA" value="FRA">FRA</option>
+                        <option data-countryCode="AUS" value="AUS">AUS</option>
+                        <option data-countryCode="ESP" value="ESP">ESP</option>
+                        <option data-countryCode="IRL" value="IRL">IRL</option>
+                        <option data-countryCode="other" value="other">other</option>
                     </select>
                                 </div>
 
@@ -102,7 +100,8 @@
                     </div>
                 </form>
                 <div >
-                    <h3>{{ prediction_test }}</h3>
+                    <h3 style="text-align:center; color:DarkOrange; font-size:30px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">{{ prediction_test }}</h3>
+                    <h3 style="text-align:center; color:DarkSalmon; font-size:30px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">The prediction probability is [0,1] ~ {{ prediction_prob }}</h3>
                 </div>
             </div>
         </div>
