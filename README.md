@@ -1,12 +1,12 @@
 # Predicting a startup's Acquisition Status
 
 Team Members: 
-    -Shridhar 
-    -Doleshor 
-    -Damilola 
-    -Melroy 
-    -Aman 
-    -Pragati
+    • Shridhar 
+    • Doleshor 
+    • Damilola 
+    • Melroy 
+    • Aman 
+    • Pragati
 
 
 ## Table of Contents
@@ -26,11 +26,21 @@ Team Members:
 
 
 ## Introduction
-    The goal of this project is to predict startup acquistion status based on a comapnys financial statistics. While the area of using machine learning to predict IPO under pricing has neen well researched,the topic has beeen surprisingly understudied.
-    The resulting algorithm takes in a startups financial statistics such as funding dollars, active days number of funding rounds and location.The main challenge for this problem is dealing with an imbalance dataset where one class is overrepresented, but under/oversampling cannot be used as a technique to balance the data. In order to address this, an ensemble-based technique that can combine the results of a high precision anomaly detection algorithm with a random forest classifier
+    The goal of this project is to predict startup acquistion status based on a comapnys financial statistics. 
+    While the area of using machine learning to predict IPO under pricing has neen well researched,the topic 
+    has beeen surprisingly understudied.The resulting algorithm takes in a startups financial statistics such 
+    as funding dollars, active days number of funding rounds and location.The main challenge for this problem 
+    is dealing with an imbalance dataset where one class is overrepresented, but under/oversampling cannot be 
+    used as a technique to balance the data. In order to address this, an ensemble-based technique that can 
+    combine the results of a high precision anomaly detection algorithm with a random forest classifier.
 
 ## Abstract
-    The goal of this study is to determine whether a startup is active or not. This information system was developed using the SDLC (Systems Development Life Cycle), which has four stages: planning, analysis, design, and implementation. It is primarily intended to forecast results. The major goal is to create a model that can anticipate the startup's financial health. However, a large section of the research focuses on project success or failure probabilities over time, taking into account temporally dynamic data like the amount raised, funding rounds, amount funded and active days.
+    The goal of this study is to determine whether a startup is active or not. This information system was 
+    developed using the SDLC (Systems Development Life Cycle), which has four stages: planning, analysis, 
+    design, and implementation. It is primarily intended to forecast results. The major goal is to create 
+    a model that can anticipate the startup's financial health. However, a large section of the research 
+    focuses on project success or failure probabilities over time, taking into account temporally dynamic 
+    data like the amount raised, funding rounds, amount funded and active days.
 
 ## Data collection
     The data is scraped from Crunchbase-2013 which contain 196,553 rows and 44 columns. Each row contains company's status (Operating, IPO, Acquired, Closed). Dataset provides company name, category, country, founding rounds, founding total usd, milestone etc.
