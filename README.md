@@ -26,15 +26,15 @@ Team Members:
 
 
 ## Introduction
-    The goal of this project is to predict startup acquistion status based on a comapnys financial 
-    statistics. While the area of using machine learning to predict IPO under pricing has been 
-    well researched,the topic has beeen surprisingly understudied.The resulting algorithm takes 
-    in a startups financial statistics such as funding dollars, active days number of funding 
-    rounds and location.The main challenge for this problem is dealing with an imbalance dataset
-    where one class is overrepresented, but under/oversampling cannot be used as a technique 
-    to balance the data. In order to address this, an ensemble-based technique that can 
-    combine the results of a high precision anomaly detection algorithm with a random forest 
-    classifier.
+The goal of this project is to predict startup acquistion status based on a comapnys financial 
+statistics. While the area of using machine learning to predict IPO under pricing has been 
+well researched,the topic has beeen surprisingly understudied.The resulting algorithm takes 
+in a startups financial statistics such as funding dollars, active days number of funding 
+rounds and location.The main challenge for this problem is dealing with an imbalance dataset
+where one class is overrepresented, but under/oversampling cannot be used as a technique 
+to balance the data. In order to address this, an ensemble-based technique that can 
+combine the results of a high precision anomaly detection algorithm with a random forest 
+classifier.
 
 ## Abstract
 The goal of this study is to determine whether a startup is active or not. This information system was 
@@ -45,17 +45,24 @@ focuses on project success or failure probabilities over time, taking into accou
 data like the amount raised, funding rounds, amount funded and active days.
 
 ## Data collection
-    The data is scraped from Crunchbase-2013 which contain 196,553 rows and 44 columns. Each row contains company's status (Operating, IPO, Acquired, Closed). Dataset provides company name, category, country, founding rounds, founding total usd, milestone etc.
+The data is scraped from Crunchbase-2013 which contain 196,553 rows and 44 columns. Each row contains company's status (Operating, IPO, Acquired, Closed). Dataset provides company name, category, country, founding rounds, founding total usd, milestone etc.
 
 ## Data preprocessing
-    Dataset needed to be preprocessed before modelling was done.
-    - Features of the Data: -
-    'id', 'Unnamed: 0.1', 'entity_type', 'entity_id', 'parent_id', 'name', 'normalized name', 'permalink', 'category code', 'status', 'founded at', 'closed at', 'domain', 'homepage URL', 'twitter username', 'logo URL', 'logo width', 'logo height','short description', 'description', 'overview', 'tag list', 'country code', 'state code', 'city', 'region',     'first_investment_at', 'last_investment_at', 'investment rounds', 'invested companies', 'first_funding_at',     'last_funding_at', 'funding_rounds', 'funding_total_usd', 'first_milestone_at', 'last_milestone_at', 'milestones',  'relationships', 'created by', 'created at', 'updated at', 'lat', 'lng', 'ROI'
+Dataset needed to be preprocessed before modelling was done.
+- Features of the Data:
+    'id', 'Unnamed: 0.1', 'entity_type', 'entity_id', 'parent_id', 'name', 'normalized name', 
+    'permalink', 'category code', 'status', 'founded at', 'closed at', 'domain', 'homepage URL', 
+    'twitter username', 'logo URL', 'logo width', 'logo height','short description', 'description', 
+    'overview', 'tag list', 'country code', 'state code', 'city', 'region',     'first_investment_at', 'last_investment_at', 'investment rounds', 'invested companies', 'first_funding_at',     
+    'last_funding_at', 'funding_rounds', 'funding_total_usd', 'first_milestone_at', 'last_milestone_at', 
+    'milestones',  'relationships', 'created by', 'created at', 'updated at', 'lat', 'lng', 'ROI'
 
-    - Removal of all the Unwanted Columns.
-    As we can clearly see there were many irrelevant and reductant columns in the dataset which needed to be removed like   'domain', 'homepage URL', 'twitter_username''logo URL', 'logo width', 'logo height', 'short description', 'description','overview', 'tag list', 'name', 'normalized name', 'permalink', 'invested companies'. These are all the irrelevant columns
-
-    There were columns with N/A values more than 96% which were also dropped. This was Done due to the fact that those columns will not help regarding the modelling and would only hinder the overall process.
+- Removal of all the Unwanted Columns.
+    As we can clearly see there were many irrelevant and reductant columns in the dataset which 
+    needed to be removed like   'domain', 'homepage URL', 'twitter_username''logo URL', 'logo width', 
+    'logo height', 'short description', 'description','overview', 'tag list', 'name', 'normalized name', 
+    'permalink', 'invested companies'. These are all the irrelevant columns
+There were columns with N/A values more than 96% which were also dropped. This was Done due to the fact that those columns will not help regarding the modelling and would only hinder the overall process.
 
     - Outliers.
     Removal of all the outliers in ‘funding rounds’ and ‘funding_total_usd’ as they can
