@@ -1,12 +1,12 @@
 # Predicting a startup's Acquisition Status
 
-Team Members: 
-    • Shridhar 
-    • Doleshor 
+#### Team Members: 
+    • Shridhar Dhoni
+    • Doleshor Khadka
     • Damilola 
-    • Melroy 
+    • Melroy Pereira
     • Aman 
-    • Pragati
+    • Pragati Upadhya
 
 
 ## Table of Contents
@@ -101,6 +101,8 @@ Finally, we add the new model to ensemble, and	repeat!
 
 
 ## Data Visualizations
+Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data.
+We have visualize the data check the outliers using boxplot and verified if the data is normalized. Using heatmap ,we found the correlation between each features. These techniques are very much useful when it comes reduce the more correlated variables in the dataset. Inaddition, We have checked the data balance in the dataset. It is clearly indicated that the dataset is imbalanced and the operating class is occred more often as compared to the closed class.
 
 ## Results and Discussions
 ### Model 1: Logistic Regression
